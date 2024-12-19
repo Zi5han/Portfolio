@@ -4,6 +4,7 @@ import styles from './Navbar.module.css';
 import { getAssetPath } from '../../utils';
 
 export const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className={styles.navbar}>
       <a className={styles.title} href='/'>
@@ -12,21 +13,34 @@ export const Navbar = () => {
       <div className={styles.menu}>
         <img
           className={styles.menuBtn}
-          src={getAssetPath('nav/menuIcon.png')}
+          src={
+            menuOpen
+              ? getAssetPath('nav/closeIcon.png')
+              : getAssetPath('nav/menuIcon.png')
+          }
+          onClick={() => setMenuOpen(!menuOpen)}
           alt='menu-button'
         />
-        <ul className={styles.menuItem}>
+        <ul className={`${styles.menuItem} ${menuOpen && styles.menuOpen}`}>
           <li>
-            <a href='#about'>About</a>
+            <a href='#about' onClick={() => setMenuOpen(false)}>
+              About
+            </a>
           </li>
           <li>
-            <a href='#experience'>Experience</a>
+            <a href='#experience' onClick={() => setMenuOpen(false)}>
+              Experience
+            </a>
           </li>
           <li>
-            <a href='#projects'>Projects</a>
+            <a href='#projects' onClick={() => setMenuOpen(false)}>
+              Projects
+            </a>
           </li>
           <li>
-            <a href='#contact'>Contact</a>
+            <a href='#contact' onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
           </li>
         </ul>
       </div>
