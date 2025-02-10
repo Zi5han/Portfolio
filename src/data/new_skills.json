@@ -1,0 +1,82 @@
+[
+  {
+    "category": "Game-Developement",
+    "skills": [
+      {
+        "title": "Unity",
+        "imageSrc": "skills/lang/unity.png"
+      },
+      {
+        "title": "OpenGL & GLSL",
+        "imageSrc": "skills/lang/opengl.png"
+      }
+    ]
+  },
+  {
+    "category": "Languages",
+    "skills": [
+      {
+        "title": "C++",
+        "imageSrc": "skills/lang/cpp.png"
+      },
+      {
+        "title": "C#",
+        "imageSrc": "skills/lang/cs.png"
+      },
+      {
+        "title": "JavaScript",
+        "imageSrc": "skills/lang/js.png"
+      },
+      {
+        "title": "Python",
+        "imageSrc": "skills/lang/python.png"
+      },
+      {
+        "title": "Java",
+        "imageSrc": "skills/lang/java.png"
+      }
+    ]
+  },
+  {
+    "category": "Web-Developement",
+    "skills": [
+      {
+        "title": "HTML & CSS",
+        "imageSrc": "skills/webdev/htmlcss.png"
+      },
+      {
+        "title": "SQL",
+        "imageSrc": "skills/webdev/sql.png"
+      },
+      {
+        "title": "Node",
+        "imageSrc": "skills/webdev/node.png"
+      },
+      {
+        "title": "React",
+        "imageSrc": "skills/webdev/react.png"
+      },
+      {
+        "title": "Wordpress",
+        "imageSrc": "skills/lang/wordpress.png"
+      }
+    ]
+  },
+  {
+    "category": "Other",
+    "skills": [
+      {
+        "title": "Serveradministration",
+        "imageSrc": "skills/other/linux.png"
+      },
+      {
+        "title": "Docker",
+        "imageSrc": "skills/other/docker.png"
+      },
+      {
+        "title": "Android Studio",
+        "imageSrc": "skills/other/androidstudio.png"
+      }
+    ]
+  }
+]
