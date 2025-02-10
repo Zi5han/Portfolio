@@ -8,7 +8,7 @@ import { getAssetPath } from '../../utils';
 export const Experience = () => {
   return (
     <section className={styles.container} id='experience'>
-      <h2 className={styles.title}>{'Experience'}</h2>
+      <h2 className={styles.title}>{'Experience and Carrier'}</h2>
       <div className={styles.content}>
         <div className={styles.skillsContainer}>
           {skills.map((skillItem, index) => {
@@ -34,8 +34,13 @@ export const Experience = () => {
                   alt={`${historyItem.organisation} Logo`}
                 />
                 <div className={styles.historyItemDetails}>
-                  <h3>{`${historyItem.role}, ${historyItem.organisation}`}</h3>
-                  <p>{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
+                  <h3>{`${historyItem.role}`}</h3>
+                  <p
+                    className={styles.hisotryItemOrga}
+                  >{`${historyItem.organisation}`}</p>
+                  <p
+                    className={styles.historyItemDate}
+                  >{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
                   <ul>
                     {historyItem.experiences.map((experienceItem, index) => {
                       return <li key={index}>{experienceItem}</li>;
