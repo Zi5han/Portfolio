@@ -3,19 +3,19 @@ import { getAssetPath as getImageURL } from '../../utils';
 
 export const About = () => {
   return (
-    <section className={styles.container} id="about">
-      <h2 className={styles.title}>About</h2>
+    <section className={styles.container} id='about'>
+      <h2 className={styles.title}>{'About'}</h2>
       <div className={styles.content}>
         <img
           src={getImageURL('about/aboutImage.png')}
-          alt="Me with Laptop"
+          alt='Me with Laptop'
           className={styles.aboutImage}
         />
         <ul className={styles.aboutList}>
           <li className={styles.aboutItem}>
-            <img src={getImageURL('about/cursorIcon.png')} alt="Cursor icon" />
+            <img src={getImageURL('about/cursorIcon.png')} alt='Cursor icon' />
             <div className={styles.aboutItemText}>
-              <h3>Frontend Developer</h3>
+              <h3>{'Frontend Developer'}</h3>
               <p>
                 {
                   "I'm a front-end developer With experience in building responsive and optimized sites"
@@ -24,9 +24,9 @@ export const About = () => {
             </div>
           </li>
           <li className={styles.aboutItem}>
-            <img src={getImageURL('about/serverIcon.png')} alt="Server icon" />
+            <img src={getImageURL('about/serverIcon.png')} alt='Server icon' />
             <div className={styles.aboutItemText}>
-              <h3>Backend Developer</h3>
+              <h3>{'Backend Developer'}</h3>
               <p>
                 {
                   'I have experience developing fast and optimised back-end systems and APIs'
@@ -35,9 +35,9 @@ export const About = () => {
             </div>
           </li>
           <li className={styles.aboutItem}>
-            <img src={getImageURL('about/cursorIcon.png')} alt="UI icon" />
+            <img src={getImageURL('about/cursorIcon.png')} alt='UI icon' />
             <div className={styles.aboutItemText}>
-              <h3>UI Designer</h3>
+              <h3>{'UI Designer'}</h3>
               <p>
                 {
                   'I have designed multiple landing pages and have created design systems as well'

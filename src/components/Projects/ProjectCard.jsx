@@ -14,7 +14,7 @@ export const ProjectCard = ({
         src={getAssetPath(imageSrc)}
         alt={`Image of ${title}`}
       />
-      <h3 className={styles.title}>{title}</h3>
+      <h3 className={styles.cardTitle}>{title}</h3>
       <p className={styles.description}>{description}</p>
       <ul className={styles.skillsList}>
         {skills.map((skillItem, index) => {
@@ -26,8 +26,8 @@ export const ProjectCard = ({
         })}
       </ul>
       <div className={styles.linksContainer}>
-        <a href={demo}>Demo</a>
-        <a href={source}>Source</a>
+        {demo && <a href={demo}>{'Demo'}</a>}
+        {source && <a href={source}>{'Source'}</a>}
       </div>
     </div>
   );

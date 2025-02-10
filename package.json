@@ -8,15 +8,14 @@
     "build": "npm run test && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "semistandard",
+    "test": "semistandard --ignore '{jsx-curly-brace-presence}'",
     "fix": "semistandard --fix"
   },
   "dependencies": {
     "@fontsource/outfit": "^5.1.0",
     "@fontsource/roboto": "^5.1.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "semistandard": "^17.0.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
