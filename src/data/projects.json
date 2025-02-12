@@ -18,7 +18,7 @@
   {
     "title": "Storyteller",
     "imageSrc": "projects/project.png",
-    "description": "This project is a dungeon crawler game that was made with Unity. I worked in a team with other developer and artist students. I was responsible for procedurally generating the dungeons.",
+    "description": "This project is a dungeon crawler game that was made with Unity. I worked in a small team with other developer and artist students. I was responsible for procedurally generating the dungeons.",
     "skills": ["Unity", "C#"],
     "demo": "",
     "source": "https://github.com/Zi5han/StrorytellerGame"
@@ -30,5 +30,21 @@
     "skills": ["Unity", "C#"],
     "demo": "",
     "source": "https://github.com/Zi5han/StrorytellerGame"
+  },
+  {
+    "imageSrc": "projects/project.png",
+    "title": "Morally Flexible",
+    "description": "This project is a 2 player party game. This game was made in a small during a game jam. I was responsible for implementing gameplay features and directly collaborating with 3d artists from our team.",
+    "skills": ["Unity", "C#", "Game Jam"],
+    "demo": "",
+    "source": "https://github.com/Zi5han/MorallyFlexible"
+  },
+  {
+    "imageSrc": "projects/project.png",
+    "title": "Stripification",
+    "description": "This project is an implementation of the \"Stripification\" algorithm where mesh polygons are grouped into strips. This algorithm can improve redndering performance by reducing the amount of draw calls.",
+    "skills": ["OpenGL", "C++"],
+    "demo": "",
+    "source": "https://github.com/Zi5han/Stripification"
   }
 ]
