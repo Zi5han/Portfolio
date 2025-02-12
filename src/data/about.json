@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Who am I?",
+        "content": "I am a student from Germany who is passionate about technology and programming. I am currently pursuing my Master's degree in Computer Science in Tuebungen.",
+        "imagePath": "about/cursorIcon.png",
+        "imageAlt": "Cursor Icon"
+    },
+    {
+        "title": "I speak multiple Languages",
+        "content": "Apart from programming languages, I am proficient in German, Russian and English. Currently I am studying Japanese, mostly by myself.",
+        "imagePath": "about/cursorIcon.png",
+        "imageAlt": "Cursor Icon"
+    },
+    {
+        "title": "Projects and experiences",
+        "content": "I believe in learning by doing, especially in fields that interest you personally. I've worked on several personal and collaborative projects and have gained experience in various fields. <br><br> (Check out my <a href=\"#projects\">Projects</a> down below)",
+        "imagePath": "about/cursorIcon.png",
+        "imageAlt": "Cursor Icon"
+    }
+]

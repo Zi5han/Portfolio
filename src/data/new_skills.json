@@ -1,19 +1,19 @@
 [
   {
-    "category": "Game-Developement",
+    "category_title": "Game-Developement",
     "skills": [
       {
         "title": "Unity",
-        "imageSrc": "skills/lang/unity.png"
+        "imageSrc": "skills/gamedev/unity.png"
       },
       {
         "title": "OpenGL & GLSL",
-        "imageSrc": "skills/lang/opengl.png"
+        "imageSrc": "skills/gamedev/opengl.png"
       }
     ]
   },
   {
-    "category": "Languages",
+    "category_title": "Languages",
     "skills": [
       {
         "title": "C++",
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "category": "Web-Developement",
+    "category_title": "Web-Developement",
     "skills": [
       {
         "title": "HTML & CSS",
@@ -58,15 +58,15 @@
       },
       {
         "title": "Wordpress",
-        "imageSrc": "skills/lang/wordpress.png"
+        "imageSrc": "skills/webdev/wordpress.png"
       }
     ]
   },
   {
-    "category": "Other",
+    "category_title": "Other",
     "skills": [
       {
-        "title": "Serveradministration",
+        "title": "Systemadmin",
         "imageSrc": "skills/other/linux.png"
       },
       {

@@ -1,26 +1,34 @@
 [
   {
-    "title": "Project A",
+    "title": "VoxGen",
     "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "description": "This is project is a voxel engine made with OpenGL in C++ with procedural world generation. This Project was made as part of my bachelor's thesis.",
+    "skills": ["OpenGL", "C++", "GLSL"],
+    "demo": "",
+    "source": "https://github.com/Zi5han/VoxGen"
   },
   {
-    "title": "Project B",
+    "title": "Rubiks Cube",
     "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node", "Sass"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "description": "This project was made with OpenGL in C++. This is a simple simulation of a Rubiks Cube that can tinkered with a mouse.",
+    "skills": ["OpenGL", "C++", "GLSL"],
+    "demo": "",
+    "source": "https://github.com/Zi5han/RubicsCube"
   },
   {
-    "title": "Project C",
+    "title": "Storyteller",
     "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "description": "This project is a dungeon crawler game that was made with Unity. I worked in a team with other developer and artist students. I was responsible for procedurally generating the dungeons.",
+    "skills": ["Unity", "C#"],
+    "demo": "",
+    "source": "https://github.com/Zi5han/StrorytellerGame"
+  },
+  {
+    "imageSrc": "projects/project.png",
+    "title": "Platform Fighter",
+    "description": "This project is a platform fighter game prototype that was made with Unity by my friend and me. I was responsible for the movement and moveset programming for which I created a custom \"Animation Command\" Framework.",
+    "skills": ["Unity", "C#"],
+    "demo": "",
+    "source": "https://github.com/Zi5han/StrorytellerGame"
   }
 ]
