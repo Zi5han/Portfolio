@@ -1,6 +1,5 @@
-import React from 'react';
-
 import styles from './Contact.module.css';
+
 import { getAssetPath } from '../../utils';
 
 export const Contact = () => {
@@ -25,6 +24,10 @@ export const Contact = () => {
         <li className={styles.contactInfoEntry}>
           <img src={getAssetPath('contact/githubIcon.png')} alt='GitHub Icon' />
           <a href='https://github.com/myname'>github.com/myname</a>
+        </li>
+        <li className={styles.contactInfoEntry}>
+          <img src={getAssetPath('contact/discordIcon.png')} alt='Discord Icon' />
+          <a>zi5han</a>
         </li>
       </ul>
     </footer>

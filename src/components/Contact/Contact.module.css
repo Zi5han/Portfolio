@@ -8,8 +8,14 @@
   flex-direction: row;
   justify-content: space-evenly;
   width: 100vw;
-  padding: 58px 10%;
+  padding: 58px 5%;
   gap: 10px;
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contactText h2 {
@@ -29,13 +35,13 @@
   flex-direction: column;
   align-items: flex-start;
   list-style: none;
-  gap: 26px;
+  gap: 20px;
 }
 
 .contactInfoEntry {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
 }
 
 .contactInfoEntry a {
@@ -44,6 +50,11 @@
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 1.5px;
+}
+
+.contactInfoEntry img {
+  max-width: 50px;
+  max-height: 50px;
 }
 
 @media screen and (max-width: 830px) {
@@ -60,5 +71,6 @@
 
     .contactInfo {
         align-items: center;
+        align-items: stretch;
     }
 }
