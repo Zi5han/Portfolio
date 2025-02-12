@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import styles from './Navbar.module.css';
+
 import { getAssetPath } from '../../utils';
 
 export const Navbar = () => {
@@ -8,7 +9,7 @@ export const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <a className={styles.pageTitle} href='/'>
-        {'Portfolio'}
+        {"Zi5han"}
       </a>
       <div className={styles.menu}>
         <img
