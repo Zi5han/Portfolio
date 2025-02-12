@@ -9,20 +9,17 @@ export const About = () => {
     <section className={styles.container} id='about'>
       <h2 className={styles.title}>{'About Me'}</h2>
       <div className={styles.content}>
-        <img
-          src={getImageURL('about/aboutImage.png')}
-          alt='Me with Laptop'
-          className={styles.aboutImage}
-        />
         <ul className={styles.aboutList}>
           {about.map((aboutItem, index) => {
             return (
               <li className={styles.aboutItem} key={index}>
-              <img src={getImageURL(aboutItem.imagePath)} alt='Cursor icon' />
-              <div className={styles.aboutItemText}>
-                <h3>{aboutItem.title}</h3>
-                <p dangerouslySetInnerHTML={{ __html: aboutItem.content }}></p>
-              </div>
+                <img src={getImageURL(aboutItem.imagePath)} alt='Cursor icon' />
+                <div className={styles.aboutItemText}>
+                  <h3>{aboutItem.title}</h3>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: aboutItem.content }}
+                  ></p>
+                </div>
               </li>
             );
           })}
