@@ -6,5 +6,8 @@
 }
 
 html {
+  scrollbar-width: unset;
+  scrollbar-color: var(--color-secondary) var(--color-dark);
   scroll-behavior: smooth;
+  background-color: black;
 }

@@ -8,13 +8,42 @@
   margin-right: 10%;
 }
 
-.projectsContainer {
-  margin-top: 37px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 15px;
+.projectsContainerWrapper {
+  position: relative;
+  margin-top: 40px;
   width: 100%;
 }
+
+.projectsContainerWrapper::before,
+.projectsContainerWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 10;
+}
+
+.projectsContainerWrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg) 0%, rgba(0, 0, 0, 0) 20%);
+}
+
+.projectsContainerWrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg) 0%, rgba(0, 0, 0, 0) 20%);
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 15px;
+  overflow-x: scroll;
+  padding-left: 20px;
+  padding-right: 30vw;
+  padding-bottom: 15px;
+}
+

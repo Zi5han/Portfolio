@@ -1,7 +1,7 @@
-import React from 'react';
-
 import styles from './ProjectCard.module.css';
+
 import PropTypes from 'prop-types';
+
 import { getAssetPath } from '../../utils';
 
 export const ProjectCard = ({
