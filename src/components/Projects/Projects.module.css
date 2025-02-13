@@ -8,33 +8,8 @@
   margin-right: 10%;
 }
 
-.projectsContainerWrapper {
-  position: relative;
-  margin-top: 40px;
-  width: 100%;
-}
-
-.projectsContainerWrapper::before,
-.projectsContainerWrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100px;
-  z-index: 10;
-}
-
-.projectsContainerWrapper::before {
-  left: 0;
-  background: linear-gradient(to right, var(--color-bg) 0%, rgba(0, 0, 0, 0) 20%);
-}
-
-.projectsContainerWrapper::after {
-  right: 0;
-  background: linear-gradient(to left, var(--color-bg) 0%, rgba(0, 0, 0, 0) 20%);
-}
-
 .projectsContainer {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -42,8 +17,9 @@
   justify-content: flex-start;
   gap: 15px;
   overflow-x: scroll;
+  margin-top: 40px;
   padding-left: 20px;
   padding-right: 30vw;
   padding-bottom: 15px;
+  mask-image: linear-gradient(to right, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%);
 }
-
