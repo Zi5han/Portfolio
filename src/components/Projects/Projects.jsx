@@ -25,19 +25,26 @@ export const Projects = () => {
         const scrollDistance = html.scrollTop;
         const newScrollDistance = scrollDistance + e.deltaY;
 
-        const projectsContainerScrollThresholf = projectsContainer.offsetTop - (window.innerHeight - projectsContainer.clientHeight) / 2;
+        const projectsContainerScrollThresholf =
+          projectsContainer.offsetTop - (window.innerHeight - projectsContainer.clientHeight) / 2;
+        const crossedThresholdUpwards =
+          scrollDistance > projectsContainerScrollThresholf && newScrollDistance <= projectsContainerScrollThresholf;
+        const crossedThresholdDownwards =
+          scrollDistance < projectsContainerScrollThresholf && newScrollDistance >= projectsContainerScrollThresholf;
 
-        if (
-          !(isScrollAtStart && e.deltaY < 0 && newScrollDistance < projectsContainerScrollThresholf) &&
-          !(isScrollAtEnd && e.deltaY > 0 && newScrollDistance > projectsContainerScrollThresholf)
-        ) {
+        if (crossedThresholdUpwards || crossedThresholdDownwards || (!isScrollAtStart && !isScrollAtEnd)) {
           e.preventDefault();
           html.style.overflow = 'hidden';
+          if (html.scrollTimeout) {
+            clearTimeout(html.scrollTimeout);
+          }
+          html.scrollTimeout = setTimeout(() => {
+            html.style.overflow = 'unset';
+          }, 1000);
           html.scrollTop = projectsContainerScrollThresholf;
-          projectsContainer.scrollLeft += e.deltaY * 2;
+          projectsContainer.scrollLeft += e.deltaY * 1.5;
         } else {
           html.style.overflow = 'unset';
-          if (isScrollAtEnd) projectsContainer.scrollLeft = projectsContainer.scrollWidth;
         }
       };
       root.addEventListener('wheel', onWheel);
