@@ -10,6 +10,7 @@
   z-index: 1;
   margin-right: 10%;
   margin-left: 10%;
+  overflow-x: hidden;
 }
 
 .content {

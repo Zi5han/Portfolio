@@ -1,22 +1,31 @@
 @import '../../vars.css';
 
 .container {
+  margin-top: 60px;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding-right: 15%;
+  padding-left: 15%;
+}
+
+.contentWrapper {
   position: relative;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 49px;
-  z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+  min-height: 55vh;
 }
 
 .content {
   display: flex;
+  margin-left: 15px;
   flex-direction: column;
   align-items: flex-start;
   color: var(--color-text);
   z-index: 1;
+  flex: 2;
 }
 
 .mainTitle {
@@ -24,11 +33,7 @@
   font-weight: 900;
   margin-bottom: 33px;
   font-family: var(--font-roboto);
-  background: linear-gradient(
-    90deg,
-    var(--color-text) 70%,
-    rgba(255, 255, 255, 0) 120%
-  );
+  background: linear-gradient(90deg, var(--color-text) 70%, rgba(255, 255, 255, 0) 120%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -53,7 +58,8 @@
 
 .heroImg {
   margin: 50px;
-  width: 50%;
+  width: 40%;
+  flex: 1;
   z-index: 1;
   /* circle cutout */
   clip-path: circle(50% at 50% 50%);
@@ -80,8 +86,6 @@
   position: absolute;
   width: 50vw;
   height: 50vw;
-  min-width: 350px;
-  min-height: 350px;
   top: -128px;
   left: -10vw;
   border-radius: 764px;
@@ -94,8 +98,6 @@
   position: absolute;
   width: 70vw;
   height: 50vw;
-  min-width: 350px;
-  min-height: 250px;
   top: 246px;
   left: 10vw;
   right: -25vw;
@@ -106,11 +108,18 @@
 }
 
 @media screen and (max-width: 850px) {
-  .container {
+  .contentWrapper {
     flex-direction: column-reverse;
   }
 
   .content {
     align-items: center;
+    margin-left: 0;
   }
+
+  .heroImg {
+    width: 60%;
+    margin: 25px;
+  }
+
 }
