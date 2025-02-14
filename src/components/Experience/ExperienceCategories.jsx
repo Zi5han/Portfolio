@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 
 import { getAssetPath } from '../../utils';
 
-export const ExperienceCategories = ({
-  skillCategory: { category_title, skills }
-}) => {
+export const ExperienceCategories = ({ skillCategory: { category_title, skills } }) => {
   return (
     <div className={styles.categoryContainer}>
       <h3 className={styles.categoryTitle}>{category_title}</h3>
@@ -15,10 +13,7 @@ export const ExperienceCategories = ({
           return (
             <div key={index2} className={styles.skillItem}>
               <div className={styles.skillImageContainer}>
-                <img
-                  src={getAssetPath(skillItem.imageSrc)}
-                  alt={skillItem.title}
-                />
+                <img src={getAssetPath(skillItem.imageSrc)} alt={skillItem.title} />
               </div>
               <p>{skillItem.title}</p>
             </div>

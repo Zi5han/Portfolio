@@ -13,7 +13,7 @@ export const Experience = () => {
       <div className={styles.content}>
         <div className={styles.skillsPanel}>
           {new_skills.map((skillCategory, index1) => {
-            return <ExperienceCategories key={index1} skillCategory={skillCategory}/>;
+            return <ExperienceCategories key={index1} skillCategory={skillCategory} />;
           })}
         </div>
         <div className={styles.historyPanel}>
@@ -21,18 +21,11 @@ export const Experience = () => {
             {history.map((historyItem, index) => {
               return (
                 <li key={index} className={styles.historyItem}>
-                  <img
-                    src={getAssetPath(historyItem.imageSrc)}
-                    alt={`${historyItem.organisation} Logo`}
-                  />
+                  <img src={getAssetPath(historyItem.imageSrc)} alt={`${historyItem.organisation} Logo`} />
                   <div className={styles.historyItemDetails}>
                     <h3>{`${historyItem.role}`}</h3>
-                    <p
-                      className={styles.hisotryItemOrga}
-                    >{`${historyItem.organisation}`}</p>
-                    <p
-                      className={styles.historyItemDate}
-                    >{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
+                    <p className={styles.hisotryItemOrga}>{`${historyItem.organisation}`}</p>
+                    <p className={styles.historyItemDate}>{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
                     <ul>
                       {historyItem.experiences.map((experienceItem, index) => {
                         return <li key={index}>{experienceItem}</li>;

@@ -15,10 +15,7 @@ export const Contact = () => {
           <a href='mailto:myemail@email.com'>myemail@email.com</a>
         </li>
         <li className={styles.contactInfoEntry}>
-          <img
-            src={getAssetPath('contact/linkedinIcon.png')}
-            alt='LinkedIn Icon'
-          />
+          <img src={getAssetPath('contact/linkedinIcon.png')} alt='LinkedIn Icon' />
           <a href='https://linkedin.com/myname'>linkedin.com/myname</a>
         </li>
         <li className={styles.contactInfoEntry}>

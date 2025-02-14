@@ -16,9 +16,7 @@ export const About = () => {
                 <img src={getImageURL(aboutItem.imagePath)} alt='Cursor icon' />
                 <div className={styles.aboutItemText}>
                   <h3>{aboutItem.title}</h3>
-                  <p
-                    dangerouslySetInnerHTML={{ __html: aboutItem.content }}
-                  ></p>
+                  <p dangerouslySetInnerHTML={{ __html: aboutItem.content }}></p>
                 </div>
               </li>
             );

@@ -6,7 +6,6 @@
   font-weight: 500px;
   letter-spacing: 1.5px;
   margin-bottom: 20px;
-  
 }
 
 .skillsContainer {
@@ -52,7 +51,7 @@
   .skillsContainer {
     justify-content: center;
   }
-  
+
   .categoryTitle {
     text-align: center;
   }

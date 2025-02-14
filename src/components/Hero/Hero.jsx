@@ -8,7 +8,9 @@ export const Hero = () => {
       <div className={styles.contentWrapper}>
         <div className={styles.content}>
           <h1 className={styles.mainTitle}>{"Hey, I'm Zishan"}</h1>
-          <p className={styles.description}>{"I'm an aspiring game developer with knowledge in different areas. Check out my projects."}</p>
+          <p className={styles.description}>
+            {"I'm an aspiring game developer with knowledge in different areas. Check out my projects."}
+          </p>
           <a className={styles.contactBtn} href='mailto:trayten01@gmail.com'>
             {'Contact me'}
           </a>
