@@ -14,11 +14,19 @@ export const Projects = () => {
     if (projectsContainer) {
       const onWheel = (e) => {
         const isScrollAtStart = projectsContainer.scrollLeft == 0;
-        const isScrollAtEnd = projectsContainer.scrollLeft >= projectsContainer.scrollWidth - projectsContainer.clientWidth - 15;
-        console.log(projectsContainer.scrollLeft);
-        if (!(isScrollAtStart && e.deltaY < 0) && !(isScrollAtEnd && e.deltaY > 0)) {
+        const maxScrollWidth = projectsContainer.scrollWidth - projectsContainer.clientWidth;
+        const isScrollAtEnd = projectsContainer.scrollLeft >= maxScrollWidth - 10;
+        const containerRect = projectsContainer.getBoundingClientRect();
+
+        const viewportCenter = window.innerHeight / 2;
+        const containerCenter = containerRect.top + containerRect.height / 2;
+
+        const isContainerCentered = Math.abs(viewportCenter - containerCenter) <= 60;
+        const isScrollAttemptValid = !(isScrollAtStart && e.deltaY < 0) && !(isScrollAtEnd && e.deltaY > 0);
+
+        if (isContainerCentered && isScrollAttemptValid) {
           e.preventDefault();
-          projectsContainer.scrollLeft += e.deltaY;
+          projectsContainer.scrollLeft += e.deltaY * 2;
         }
       };
       projectsContainer.addEventListener('wheel', onWheel);

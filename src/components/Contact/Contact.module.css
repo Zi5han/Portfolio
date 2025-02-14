@@ -10,6 +10,7 @@
   width: 100%;
   padding: 58px 5%;
   gap: 10px;
+  scroll-snap-align: end;
   overflow-x: hidden;
 }
 

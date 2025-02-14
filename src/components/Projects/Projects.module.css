@@ -2,10 +2,11 @@
 @import '../../styles/global.css';
 
 .container {
-  margin-top: 75px;
+  margin-top: 80px;
   color: var(--color-text);
   margin-left: 10%;
   margin-right: 10%;
+  scroll-snap-align: center;
   overflow-x: hidden;
 }
 
@@ -16,11 +17,20 @@
   flex-wrap: nowrap;
   align-items: stretch;
   justify-content: flex-start;
-  gap: 15px;
   overflow-x: scroll;
   margin-top: 40px;
-  padding-left: 20px;
-  padding-right: 30vw;
   padding-bottom: 15px;
-  mask-image: linear-gradient(to right, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10px, black calc(100% - 10px), transparent 100%);
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.projectsContainer > div {
+  scroll-snap-align: start;
+}
+
+@media screen and (max-width: 830px) {
+  .projectsContainer > div {
+    scroll-snap-align: center;
+  }
 }

@@ -1,13 +1,21 @@
 @import '../../vars.css';
 
+.containerWrapper {
+  width: 100%;
+  max-width: 400px;
+  overflow-x: visible;
+}
+
 .container {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  height: 100%;
+  max-width: 100%;
   background: linear-gradient(180deg, #576cbc 0%, #132a63 100%);
+  border-radius: 10px;
   box-shadow: 0 16px 14px 0 #04152d;
   padding: 18px 24px;
-  width: 30vw;
+  margin: 0 7.5px;
 }
 
 .image {
@@ -63,7 +71,7 @@
 }
 
 @media screen and (max-width: 830px) {
-  .container {
-    min-width: 65vw;
+  .containerWrapper {
+    min-width: 70vw;
   }
 }

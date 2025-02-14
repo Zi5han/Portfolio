@@ -4,30 +4,26 @@ import PropTypes from 'prop-types';
 
 import { getAssetPath } from '../../utils';
 
-export const ProjectCard = ({
-  projectItem: { title, imageSrc, description, skills, demo, source }
-}) => {
+export const ProjectCard = ({ projectItem: { title, imageSrc, description, skills, demo, source } }) => {
   return (
-    <div className={styles.container}>
-      <img
-        className={styles.image}
-        src={getAssetPath(imageSrc)}
-        alt={`Image of ${title}`}
-      />
-      <h3 className={styles.cardTitle}>{title}</h3>
-      <p className={styles.description}>{description}</p>
-      <ul className={styles.skillsList}>
-        {skills.map((skillItem, index) => {
-          return (
-            <li className={styles.skillItem} key={index}>
-              {skillItem}
-            </li>
-          );
-        })}
-      </ul>
-      <div className={styles.linksContainer}>
-        {demo && <a href={demo}>{'Demo'}</a>}
-        {source && <a href={source}>{'Source'}</a>}
+    <div className={styles.containerWrapper}>
+      <div className={styles.container}>
+        <img className={styles.image} src={getAssetPath(imageSrc)} alt={`Image of ${title}`} />
+        <h3 className={styles.cardTitle}>{title}</h3>
+        <p className={styles.description}>{description}</p>
+        <ul className={styles.skillsList}>
+          {skills.map((skillItem, index) => {
+            return (
+              <li className={styles.skillItem} key={index}>
+                {skillItem}
+              </li>
+            );
+          })}
+        </ul>
+        <div className={styles.linksContainer}>
+          {demo && <a href={demo}>{'Demo'}</a>}
+          {source && <a href={source}>{'Source'}</a>}
+        </div>
       </div>
     </div>
   );
