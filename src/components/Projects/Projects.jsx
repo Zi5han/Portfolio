@@ -32,7 +32,12 @@ export const Projects = () => {
         const crossedThresholdDownwards =
           scrollDistance < projectsContainerScrollThresholf && newScrollDistance >= projectsContainerScrollThresholf;
 
-        if (crossedThresholdUpwards || crossedThresholdDownwards || (!isScrollAtStart && !isScrollAtEnd)) {
+        if (
+          crossedThresholdUpwards ||
+          crossedThresholdDownwards ||
+          (!(isScrollAtStart && newScrollDistance < projectsContainerScrollThresholf) &&
+            !(isScrollAtEnd && newScrollDistance > projectsContainerScrollThresholf))
+        ) {
           e.preventDefault();
           html.style.overflow = 'hidden';
           if (html.scrollTimeout) {
@@ -42,7 +47,7 @@ export const Projects = () => {
             html.style.overflow = 'unset';
           }, 1000);
           html.scrollTop = projectsContainerScrollThresholf;
-          projectsContainer.scrollLeft += e.deltaY * 1.5;
+          projectsContainer.scrollLeft += e.deltaX + e.deltaY * 1.5;
         } else {
           html.style.overflow = 'unset';
         }
