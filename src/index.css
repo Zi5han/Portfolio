@@ -10,5 +10,4 @@ html {
   scrollbar-color: var(--color-secondary) var(--color-dark);
   scroll-behavior: smooth;
   background-color: var(--color-bg);
-  scroll-snap-type: y proximity;
 }

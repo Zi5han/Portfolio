@@ -8,29 +8,40 @@ import { ProjectCard } from './ProjectCard';
 
 export const Projects = () => {
   const projectsContainerRef = useRef(null);
+  const rootRef = useRef(document.getElementById('root'));
+  const htmlRef = useRef(document.documentElement);
 
   useEffect(() => {
     const projectsContainer = projectsContainerRef.current;
+    const root = rootRef.current;
+    const html = htmlRef.current;
+
     if (projectsContainer) {
       const onWheel = (e) => {
         const isScrollAtStart = projectsContainer.scrollLeft == 0;
         const maxScrollWidth = projectsContainer.scrollWidth - projectsContainer.clientWidth;
         const isScrollAtEnd = projectsContainer.scrollLeft >= maxScrollWidth - 10;
-        const containerRect = projectsContainer.getBoundingClientRect();
 
-        const viewportCenter = window.innerHeight / 2;
-        const containerCenter = containerRect.top + containerRect.height / 2;
+        const scrollDistance = html.scrollTop;
+        const newScrollDistance = scrollDistance + e.deltaY;
 
-        const isContainerCentered = Math.abs(viewportCenter - containerCenter) <= 60;
-        const isScrollAttemptValid = !(isScrollAtStart && e.deltaY < 0) && !(isScrollAtEnd && e.deltaY > 0);
+        const projectsContainerScrollThresholf = projectsContainer.offsetTop - (window.innerHeight - projectsContainer.clientHeight) / 2;
 
-        if (isContainerCentered && isScrollAttemptValid) {
+        if (
+          !(isScrollAtStart && e.deltaY < 0 && newScrollDistance < projectsContainerScrollThresholf) &&
+          !(isScrollAtEnd && e.deltaY > 0 && newScrollDistance > projectsContainerScrollThresholf)
+        ) {
           e.preventDefault();
+          html.style.overflow = 'hidden';
+          html.scrollTop = projectsContainerScrollThresholf;
           projectsContainer.scrollLeft += e.deltaY * 2;
+        } else {
+          html.style.overflow = 'unset';
+          if (isScrollAtEnd) projectsContainer.scrollLeft = projectsContainer.scrollWidth;
         }
       };
-      projectsContainer.addEventListener('wheel', onWheel);
-      return () => projectsContainer.removeEventListener('wheel', onWheel);
+      root.addEventListener('wheel', onWheel);
+      return () => root.removeEventListener('wheel', onWheel);
     }
   });
 
