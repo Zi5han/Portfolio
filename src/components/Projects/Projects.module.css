@@ -17,7 +17,15 @@
   align-items: stretch;
   justify-content: flex-start;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
   margin-top: 40px;
   padding-bottom: 15px;
   mask-image: linear-gradient(to right, transparent 0%, black 10px, black calc(100% - 10px), transparent 100%);
+}
+
+@media screen and (max-width: 830px) {
+  .projectsContainer > div {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  } 
 }

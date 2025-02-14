@@ -18,6 +18,8 @@ export const Projects = () => {
 
     if (projectsContainer) {
       const onWheel = (e) => {
+        if (window.innerWidth <= 830) return;
+
         const isScrollAtStart = projectsContainer.scrollLeft == 0;
         const maxScrollWidth = projectsContainer.scrollWidth - projectsContainer.clientWidth;
         const isScrollAtEnd = projectsContainer.scrollLeft >= maxScrollWidth - 10;
@@ -28,15 +30,15 @@ export const Projects = () => {
         const projectsContainerScrollThresholf =
           projectsContainer.offsetTop - (window.innerHeight - projectsContainer.clientHeight) / 2;
         const crossedThresholdUpwards =
-          scrollDistance > projectsContainerScrollThresholf && newScrollDistance <= projectsContainerScrollThresholf;
+          scrollDistance > projectsContainerScrollThresholf && newScrollDistance <= projectsContainerScrollThresholf - 5;
         const crossedThresholdDownwards =
-          scrollDistance < projectsContainerScrollThresholf && newScrollDistance >= projectsContainerScrollThresholf;
+          scrollDistance < projectsContainerScrollThresholf && newScrollDistance >= projectsContainerScrollThresholf + 5;
 
         if (
           crossedThresholdUpwards ||
           crossedThresholdDownwards ||
-          (!(isScrollAtStart && newScrollDistance < projectsContainerScrollThresholf) &&
-            !(isScrollAtEnd && newScrollDistance > projectsContainerScrollThresholf))
+          (!(isScrollAtStart && (newScrollDistance < projectsContainerScrollThresholf || e.deltaY < 0)) &&
+            !(isScrollAtEnd && (newScrollDistance > projectsContainerScrollThresholf || e.deltaY > 0)))
         ) {
           e.preventDefault();
           html.style.overflow = 'hidden';
