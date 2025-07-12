@@ -47,7 +47,7 @@ export const Projects = () => {
           }
           html.scrollTimeout = setTimeout(() => {
             html.style.overflow = 'unset';
-          }, 1000);
+          }, 2000);
           html.scrollTop = projectsContainerScrollThresholf;
           projectsContainer.scrollLeft += e.deltaX + e.deltaY * 1.5;
         } else {
