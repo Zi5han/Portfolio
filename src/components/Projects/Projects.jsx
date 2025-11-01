@@ -12,51 +12,65 @@ export const Projects = () => {
   const htmlRef = useRef(document.documentElement);
 
   useEffect(() => {
-    const projectsContainer = projectsContainerRef.current;
+    const el = projectsContainerRef.current;
+    if (!el) return;
     const root = rootRef.current;
     const html = htmlRef.current;
 
-    if (projectsContainer) {
-      const onWheel = (e) => {
-        if (window.innerWidth <= 830) return;
+    const EPS = 1;
 
-        const isScrollAtStart = projectsContainer.scrollLeft == 0;
-        const maxScrollWidth = projectsContainer.scrollWidth - projectsContainer.clientWidth;
-        const isScrollAtEnd = projectsContainer.scrollLeft >= maxScrollWidth - 10;
+    // Use a rAF queue to avoid layout thrash on very fast wheels
+    let queued = false;
+    let pendingDelta = 0;
 
-        const scrollDistance = html.scrollTop;
-        const newScrollDistance = scrollDistance + e.deltaY;
-
-        const projectsContainerScrollThresholf =
-          projectsContainer.offsetTop - (window.innerHeight - projectsContainer.clientHeight) / 2;
-        const crossedThresholdUpwards =
-          scrollDistance > projectsContainerScrollThresholf && newScrollDistance <= projectsContainerScrollThresholf - 5;
-        const crossedThresholdDownwards =
-          scrollDistance < projectsContainerScrollThresholf && newScrollDistance >= projectsContainerScrollThresholf + 5;
-
-        if (
-          crossedThresholdUpwards ||
-          crossedThresholdDownwards ||
-          (!(isScrollAtStart && (newScrollDistance < projectsContainerScrollThresholf || e.deltaY < 0)) &&
-            !(isScrollAtEnd && (newScrollDistance > projectsContainerScrollThresholf || e.deltaY > 0)))
-        ) {
-          e.preventDefault();
-          html.style.overflow = 'hidden';
-          if (html.scrollTimeout) {
-            clearTimeout(html.scrollTimeout);
-          }
-          html.scrollTimeout = setTimeout(() => {
-            html.style.overflow = 'unset';
-          }, 2000);
-          html.scrollTop = projectsContainerScrollThresholf;
-          projectsContainer.scrollLeft += e.deltaX + e.deltaY * 1.5;
-        } else {
-          html.style.overflow = 'unset';
-        }
-      };
-      root.addEventListener('wheel', onWheel);
-      return () => root.removeEventListener('wheel', onWheel);
+    function atStart() {
+      return el.scrollLeft <= 0 + EPS;
     }
+    function atEnd() {
+      return el.scrollLeft >= el.scrollWidth - el.clientWidth - EPS;
+    }
+
+    function flush() {
+      queued = false;
+      if (pendingDelta === 0) return;
+
+      const next = Math.max(
+        0,
+        Math.min(el.scrollLeft + pendingDelta, el.scrollWidth - el.clientWidth)
+      );
+      el.scrollLeft = next;
+      pendingDelta = 0;
+    }
+
+    const onWheel = (e) => {
+      if (window.innerWidth <= 830) return;
+
+      const horizontalScrollDelta = e.deltaX + e.deltaY * 0.75;
+      if (horizontalScrollDelta === 0) return;
+
+      const canScrollLeft = !atStart();
+      const canScrollRight = !atEnd();
+
+      const containerScrollPosition =
+        Math.round(el.offsetTop - (window.innerHeight - el.clientHeight) / 2);
+
+      const isUnderThreshold = html.scrollTop + e.deltaY >= containerScrollPosition;
+      const isOverThreshold = html.scrollTop + e.deltaY <= containerScrollPosition;
+
+      if (!(isOverThreshold && !canScrollLeft) && !(isUnderThreshold && !canScrollRight)) {
+        e.preventDefault();
+
+        document.documentElement.scrollTop = containerScrollPosition;
+
+        pendingDelta += horizontalScrollDelta;
+        if (!queued) {
+          queued = true;
+          requestAnimationFrame(flush);
+        }
+      }
+    };
+    root.addEventListener('wheel', onWheel, { passive: false });
+    return () => root.removeEventListener('wheel', onWheel);
   });
 
   return (
