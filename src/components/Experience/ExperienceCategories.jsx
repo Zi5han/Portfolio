@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 
 import { getAssetPath } from '../../utils';
 
-export const ExperienceCategories = ({ skillCategory: { category_title, skills } }) => {
+export const ExperienceCategories = ({ skillCategory: { category_title: categoryTitle, skills } }) => {
   return (
     <div className={styles.categoryContainer}>
-      <h3 className={styles.categoryTitle}>{category_title}</h3>
+      <h3 className={styles.categoryTitle}>{categoryTitle}</h3>
       <div className={styles.skillsContainer}>
         {skills.map((skillItem, index2) => {
           return (

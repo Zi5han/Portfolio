@@ -8,8 +8,8 @@
     "build": "npm run test && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "semistandard --ignore '{jsx-curly-brace-presence}'",
-    "fix": "semistandard --fix"
+    "test": "eslint .",
+    "fix": "eslint . --fix"
   },
   "dependencies": {
     "@fontsource/outfit": "^5.1.0",
