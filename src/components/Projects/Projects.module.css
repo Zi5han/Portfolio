@@ -13,19 +13,31 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: stretch;
-  justify-content: flex-start;
-  overflow-x: scroll;
+  justify-content: space-around;
   scroll-snap-type: x mandatory;
   margin-top: 40px;
   padding-bottom: 15px;
-  mask-image: linear-gradient(to right, transparent 0%, black 10px, black calc(100% - 10px), transparent 100%);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10px,
+    black calc(100% - 10px),
+    transparent 100%
+  );
+  row-gap: 40px;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1000px) {
+  .projectsContainer {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+
   .projectsContainer > div {
     scroll-snap-align: center;
     scroll-snap-stop: always;
-  } 
+  }
 }
