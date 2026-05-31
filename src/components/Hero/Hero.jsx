@@ -11,11 +11,11 @@ export const Hero = () => {
           <p className={styles.description}>
             {"I'm an aspiring game developer with knowledge in different areas. Check out my projects."}
           </p>
-          <a className={styles.contactBtn} href='mailto:trayten01@gmail.com'>
+          <a className={styles.contactBtn} href='#contact'>
             {'Contact me'}
           </a>
         </div>
-        <img src={getAssetPath('hero/zi5han_pic.png')} alt='Zishan Profile Picture' className={styles.heroImg} />
+        <img src={getAssetPath('hero/portrait.png')} alt='Zishan Profile Picture' className={styles.heroImg} />
       </div>
       <div className={styles.topBlur} />
       <div className={styles.bottomBlur} />

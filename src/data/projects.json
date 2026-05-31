@@ -1,15 +1,15 @@
 [
   {
     "title": "VoxGen",
-    "imageSrc": "projects/project.png",
-    "description": "This is project is a voxel engine made with OpenGL in C++ with procedural world generation. This Project was made as part of my bachelor's thesis.",
+    "imageSrc": "projects/voxgen.png",
+    "description": "This project is a custom voxel engine made with OpenGL in C++ with procedural world generation. This Project was made as part of my bachelor's thesis.",
     "skills": ["OpenGL", "C++", "GLSL"],
     "demo": "",
     "source": "https://github.com/Zi5han/VoxGen"
   },
   {
-    "title": "Rubiks Cube",
-    "imageSrc": "projects/project.png",
+    "title": "RubicsCube",
+    "imageSrc": "projects/rubicscube.png",
     "description": "This project was made with OpenGL in C++. This is a simple simulation of a Rubiks Cube that can tinkered with a mouse.",
     "skills": ["OpenGL", "C++", "GLSL"],
     "demo": "",
@@ -17,22 +17,22 @@
   },
   {
     "title": "Storyteller",
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/storyteller.png",
     "description": "This project is a dungeon crawler game that was made with Unity. I worked in a small team with other developer and artist students. I was responsible for procedurally generating the dungeons.",
     "skills": ["Unity", "C#"],
     "demo": "",
     "source": "https://github.com/Zi5han/StrorytellerGame"
   },
   {
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/platform_fighter.png",
     "title": "Platform Fighter",
     "description": "This project is a platform fighter game prototype that was made with Unity by my friend and me. I was responsible for the movement and moveset programming for which I created a custom \"Animation Command\" Framework.",
     "skills": ["Unity", "C#"],
     "demo": "",
-    "source": "https://github.com/Zi5han/StrorytellerGame"
+    "source": "https://github.com/gregorgermerodt/PlatfomFighterUnityCsharp"
   },
   {
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/morallyflexible.png",
     "title": "Morally Flexible",
     "description": "This project is a 2 player party game. This game was made in a small during a game jam. I was responsible for implementing gameplay features and directly collaborating with 3d artists from our team.",
     "skills": ["Unity", "C#", "Game Jam"],
@@ -40,7 +40,7 @@
     "source": "https://github.com/Zi5han/MorallyFlexible"
   },
   {
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/stripification.png",
     "title": "Stripification",
     "description": "This project is an implementation of the \"Stripification\" algorithm where mesh polygons are grouped into strips. This algorithm can improve redndering performance by reducing the amount of draw calls.",
     "skills": ["OpenGL", "C++"],
