@@ -12,7 +12,7 @@ export const Contact = () => {
       <ul className={styles.contactInfo}>
         <li className={styles.contactInfoEntry}>
           <img src={getAssetPath('contact/emailIcon.png')} alt='Email Icon' />
-          <a>contact@zi5han.dev</a>
+          <a href='mailto:contact@zi5han.dev'>contact@zi5han.dev</a>
         </li>
         <li className={styles.contactInfoEntry}>
           <img src={getAssetPath('contact/linkedinIcon.png')} alt='LinkedIn Icon' />
@@ -24,7 +24,7 @@ export const Contact = () => {
         </li>
         <li className={styles.contactInfoEntry}>
           <img src={getAssetPath('contact/discordIcon.png')} alt='Discord Icon' />
-          <a>@zi5han</a>
+          <a href="https://discordapp.com/users/zi5han">@zi5han</a>
         </li>
       </ul>
     </footer>

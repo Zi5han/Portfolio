@@ -20,13 +20,13 @@
 }
 
 .contactText h2 {
-  font-size: 80px;
+  font-size: clamp(80px, 1vw, 1rem);
   font-weight: 700;
   letter-spacing: 4px;
 }
 
 .contactText p {
-  font-size: 40px;
+  font-size: clamp(40px, 1vw, 1rem);
   font-weight: 400;
   letter-spacing: 2px;
 }
@@ -42,15 +42,20 @@
 .contactInfoEntry {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
 .contactInfoEntry a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 30px;
+  font-size: clamp(25px, 2vw, 2rem);
   font-weight: 400;
   letter-spacing: 1.5px;
+}
+
+.contactInfoEntry a:hover {
+  text-decoration: underline;
 }
 
 .contactInfoEntry img {

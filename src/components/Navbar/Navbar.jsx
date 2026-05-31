@@ -9,7 +9,7 @@ export const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbarWrapper}>
-        <a className={styles.pageTitle} href='/'>
+        <a className={styles.pageTitle}>
           {'Zi5han'}
         </a>
         <div className={styles.menu}>
