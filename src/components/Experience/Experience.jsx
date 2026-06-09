@@ -1,6 +1,6 @@
 import styles from './Experience.module.css';
 
-import newSkills from '../../data/new_skills.json';
+import skills from '../../data/skills.json';
 import history from '../../data/history.json';
 
 import { getAssetPath } from '../../utils';
@@ -12,7 +12,7 @@ export const Experience = () => {
       <h2 className={styles.title}>{'Experience and Carrier'}</h2>
       <div className={styles.content}>
         <div className={styles.skillsPanel}>
-          {newSkills.map((skillCategory, index1) => {
+          {skills.map((skillCategory, index1) => {
             return <ExperienceCategories key={index1} skillCategory={skillCategory} />;
           })}
         </div>

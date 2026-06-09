@@ -1,30 +1,82 @@
 [
   {
-    "title": "HTML",
-    "imageSrc": "skills/html.png"
+    "category_title": "Game-Development",
+    "skills": [
+      {
+        "title": "Unity",
+        "imageSrc": "skills/gamedev/unity.webp"
+      },
+      {
+        "title": "OpenGL & GLSL",
+        "imageSrc": "skills/gamedev/opengl.webp"
+      }
+    ]
   },
   {
-    "title": "CSS",
-    "imageSrc": "skills/css.png"
+    "category_title": "Languages",
+    "skills": [
+      {
+        "title": "C++",
+        "imageSrc": "skills/lang/cpp.webp"
+      },
+      {
+        "title": "C#",
+        "imageSrc": "skills/lang/cs.webp"
+      },
+      {
+        "title": "JavaScript",
+        "imageSrc": "skills/lang/js.webp"
+      },
+      {
+        "title": "Python",
+        "imageSrc": "skills/lang/python.webp"
+      },
+      {
+        "title": "Java",
+        "imageSrc": "skills/lang/java.webp"
+      }
+    ]
   },
   {
-    "title": "React",
-    "imageSrc": "skills/react.png"
+    "category_title": "Web-Development",
+    "skills": [
+      {
+        "title": "HTML & CSS",
+        "imageSrc": "skills/webdev/htmlcss.webp"
+      },
+      {
+        "title": "SQL",
+        "imageSrc": "skills/webdev/sql.webp"
+      },
+      {
+        "title": "Node",
+        "imageSrc": "skills/webdev/node.webp"
+      },
+      {
+        "title": "React",
+        "imageSrc": "skills/webdev/react.webp"
+      },
+      {
+        "title": "Wordpress",
+        "imageSrc": "skills/webdev/wordpress.webp"
+      }
+    ]
   },
   {
-    "title": "Node",
-    "imageSrc": "skills/node.png"
-  },
-  {
-    "title": "GraphQL",
-    "imageSrc": "skills/graphql.png"
-  },
-  {
-    "title": "MongoDB",
-    "imageSrc": "skills/mongodb.png"
-  },
-  {
-    "title": "Figma",
-    "imageSrc": "skills/figma.png"
+    "category_title": "Other",
+    "skills": [
+      {
+        "title": "Systemadmin",
+        "imageSrc": "skills/other/linux.webp"
+      },
+      {
+        "title": "Docker",
+        "imageSrc": "skills/other/docker.webp"
+      },
+      {
+        "title": "Android Studio",
+        "imageSrc": "skills/other/androidstudio.webp"
+      }
+    ]
   }
 ]
