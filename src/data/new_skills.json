@@ -4,11 +4,11 @@
     "skills": [
       {
         "title": "Unity",
-        "imageSrc": "skills/gamedev/unity.png"
+        "imageSrc": "skills/gamedev/unity.webp"
       },
       {
         "title": "OpenGL & GLSL",
-        "imageSrc": "skills/gamedev/opengl.png"
+        "imageSrc": "skills/gamedev/opengl.webp"
       }
     ]
   },
@@ -17,23 +17,23 @@
     "skills": [
       {
         "title": "C++",
-        "imageSrc": "skills/lang/cpp.png"
+        "imageSrc": "skills/lang/cpp.webp"
       },
       {
         "title": "C#",
-        "imageSrc": "skills/lang/cs.png"
+        "imageSrc": "skills/lang/cs.webp"
       },
       {
         "title": "JavaScript",
-        "imageSrc": "skills/lang/js.png"
+        "imageSrc": "skills/lang/js.webp"
       },
       {
         "title": "Python",
-        "imageSrc": "skills/lang/python.png"
+        "imageSrc": "skills/lang/python.webp"
       },
       {
         "title": "Java",
-        "imageSrc": "skills/lang/java.png"
+        "imageSrc": "skills/lang/java.webp"
       }
     ]
   },
@@ -42,23 +42,23 @@
     "skills": [
       {
         "title": "HTML & CSS",
-        "imageSrc": "skills/webdev/htmlcss.png"
+        "imageSrc": "skills/webdev/htmlcss.webp"
       },
       {
         "title": "SQL",
-        "imageSrc": "skills/webdev/sql.png"
+        "imageSrc": "skills/webdev/sql.webp"
       },
       {
         "title": "Node",
-        "imageSrc": "skills/webdev/node.png"
+        "imageSrc": "skills/webdev/node.webp"
       },
       {
         "title": "React",
-        "imageSrc": "skills/webdev/react.png"
+        "imageSrc": "skills/webdev/react.webp"
       },
       {
         "title": "Wordpress",
-        "imageSrc": "skills/webdev/wordpress.png"
+        "imageSrc": "skills/webdev/wordpress.webp"
       }
     ]
   },
@@ -67,15 +67,15 @@
     "skills": [
       {
         "title": "Systemadmin",
-        "imageSrc": "skills/other/linux.png"
+        "imageSrc": "skills/other/linux.webp"
       },
       {
         "title": "Docker",
-        "imageSrc": "skills/other/docker.png"
+        "imageSrc": "skills/other/docker.webp"
       },
       {
         "title": "Android Studio",
-        "imageSrc": "skills/other/androidstudio.png"
+        "imageSrc": "skills/other/androidstudio.webp"
       }
     ]
   }
